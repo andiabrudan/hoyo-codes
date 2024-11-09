@@ -1,0 +1,30 @@
+name: Scrape for new codes
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Install dependencies
+        run: deno cache --lock=deno.lock ./scrapers/deps.ts
+
+      - name: Scraping...
+        run: chmod +x .github/workflows/scrape_all.sh && .github/workflows/scrape_all.sh
+
+      - name: Merge output files
+        run: awk '!seen[$0]++' codes-genshin.txt GI-Fandom-results.txt GI-hashblen-results.txt > codes-genshin.txt
+
