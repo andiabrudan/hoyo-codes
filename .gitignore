@@ -1,0 +1,10 @@
+.vscode/
+
+GI-Fandom-results.txt
+GI-hashblen-results.txt
+HSR-hashblen-results.txt
+ZZZ-hashblen-results.txt
+
+deno.lock
+
+act.exe
