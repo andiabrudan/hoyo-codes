@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  setup:
+  scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Repo
@@ -26,14 +26,8 @@ jobs:
       - name: Scraping...
         run: chmod +x .github/workflows/scrape_all.sh && .github/workflows/scrape_all.sh
 
-      - name: Merge output files
-        run: awk '!seen[$0]++' codes-genshin.txt GI-Fandom-results.txt GI-hashblen-results.txt > codes-genshin.txt
-
       - name: Push changes
         env:
-          GIT_TRACE: 1
-          GIT_CURL_VERBOSE: 1
-          GIT_TRACE_PACKET: 1
           ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
           REPO: ${{github.repository}}
         run: chmod +x .github/workflows/commit.sh && .github/workflows/commit.sh

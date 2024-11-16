@@ -1,24 +1,9 @@
-#!/usr/bin/env node
 import { DOMParser } from "./deps.ts";
+import { format } from "./deps.ts"
+import { Code, saveToFile } from "./code.ts";
+import { skipFirst } from "./utils.ts";
 
-// const OUTPUT_FILE = "./GI-Fandom-results.txt";
 const OUTPUT_FILE = Deno.args[0];
-
-function skipFirst<T>(iterable: Iterable<T>): Iterable<T> {
-    const iterator = iterable[Symbol.iterator]();
-    iterator.next(); // Skip the first element
-
-    return {
-        [Symbol.iterator]() {
-            return iterator;
-        }
-    };
-}
-
-async function saveToFile(path: string, content: string) {
-    await Deno.writeTextFile(path, content);
-    console.log(`Data saved successfully to ${path}`);
-}
 
 async function main() {
     const url: URL = new URL("https://genshin-impact.fandom.com/wiki/Promotional_Code");
@@ -39,13 +24,13 @@ async function main() {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
 
-    const codes: string[] = [];
+    const codes: Code[] = [];
     const codes_table: Element = doc.body.querySelector("#mw-content-text > div > table > tbody");
     for (const row of skipFirst(codes_table.children)) {
         const code: string = row.firstElementChild!.firstElementChild!.firstElementChild!.firstElementChild!.textContent!;
-        codes.push(code);
+        codes.push({code: code, foundOn: undefined, expires: undefined});
     }
-    await saveToFile(OUTPUT_FILE, codes.join("\n"));
+    await saveToFile(OUTPUT_FILE, codes);
 }
 
 await main();

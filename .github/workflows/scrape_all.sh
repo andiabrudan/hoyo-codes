@@ -33,4 +33,5 @@ for script_name in "${!script_pids[@]}"; do
   index=$((index + 1))
 done
 
+deno run --allow-read --allow-write ./scrapers/merge.ts GI-Fandom-results.txt GI-hashblen-results.txt codes-genshin.txt
 echo "All scripts completed successfully."
