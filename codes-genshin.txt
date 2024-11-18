@@ -7,7 +7,8 @@
     "code": "genshin52x8399"
   },
   {
-    "code": "PAGG9M78TJBQ"
+    "code": "PAGG9M78TJBQ",
+    "foundOn": 1731940492
   },
   {
     "code": "HVQAUTYB8NKE",
@@ -68,5 +69,9 @@
   {
     "code": "Genshin52VY",
     "foundOn": 1731263379
+  },
+  {
+    "code": "GENSHIN52X8399",
+    "foundOn": 1731940486
   }
 ]
