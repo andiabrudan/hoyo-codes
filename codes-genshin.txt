@@ -101,5 +101,9 @@
   {
     "code": "UAMPGJASECZH",
     "foundOn": 1734698100
+  },
+  {
+    "code": "STANDWITHMAVUIKA",
+    "foundOn": 1734736763
   }
 ]
