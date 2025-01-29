@@ -132,5 +132,12 @@
   {
     "code": "FORNATLAN",
     "foundOn": 1736265251
+  },
+  {
+    "code": "GS54MTX685"
+  },
+  {
+    "code": "GS54OTRB248",
+    "foundOn": 1737961600
   }
 ]
