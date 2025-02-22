@@ -156,5 +156,9 @@
   {
     "code": "JCWJFZG57YFW",
     "foundOn": 1739792125
+  },
+  {
+    "code": "POKAPOKAGENSHIN",
+    "foundOn": 1740236379
   }
 ]
