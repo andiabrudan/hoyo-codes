@@ -160,5 +160,9 @@
   {
     "code": "POKAPOKAGENSHIN",
     "foundOn": 1740236379
+  },
+  {
+    "code": "7B476N4TDJ6V",
+    "foundOn": 1740498659
   }
 ]
