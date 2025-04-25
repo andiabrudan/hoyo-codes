@@ -195,5 +195,17 @@
   {
     "code": "OSOIDWA2R5H3",
     "foundOn": 1744961659
+  },
+  {
+    "code": "IfaCacucu0507",
+    "foundOn": 1745585377
+  },
+  {
+    "code": "ChefEscoffier0507",
+    "foundOn": 1745588242
+  },
+  {
+    "code": "GI56Paralogism",
+    "foundOn": 1745585371
   }
 ]
