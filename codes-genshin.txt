@@ -207,5 +207,29 @@
   {
     "code": "GI56Paralogism",
     "foundOn": 1745585371
+  },
+  {
+    "code": "NODKRAI0910",
+    "foundOn": 1746016321
+  },
+  {
+    "code": "FATUI",
+    "foundOn": 1745988509
+  },
+  {
+    "code": "FROSTMOONSCIONS",
+    "foundOn": 1745988538
+  },
+  {
+    "code": "LIGHTKEEPERS",
+    "foundOn": 1745988567
+  },
+  {
+    "code": "THEWILDHUNT",
+    "foundOn": 1745988587
+  },
+  {
+    "code": "VOYNICHGUILD",
+    "foundOn": 1745988613
   }
 ]
