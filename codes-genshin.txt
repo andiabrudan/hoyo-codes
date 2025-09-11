@@ -376,5 +376,9 @@
   {
     "code": "ITSTARTSIN60NODKRAI",
     "foundOn": 1757522109
+  },
+  {
+    "code": "SWIP9F497X18",
+    "foundOn": 1757579685
   }
 ]
